@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>发布 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<div class="hd-menu clearfix">
+			<ul class="ctList">
+				<li><a class="on" href="发布(调查-评估).html">发布调查/评估</a></li>
+				<li><a href="行为风格评测(已完成).html">调查/评估管理</a></li>
+			</ul>
+			<ul class="rtList">
+				<li class="uinfo">张小贤(Mr.Z)</li>
+				<li class="lk"><a href="账户管理.html">账户管理</a></li>
+				<li class="lk"><a href="投诉管理.html">投诉管理</a></li>
+				<li class="lk"><a href="登录.html">退出</a></li>
+			</ul>
+		</div>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-head hdNavFixed">
+				<div class="links">
+					<a class="back" href="#"><i></i>返回</a>
+					<span class="tips">邀请参加行为风格评测</span>
+				</div>
+			</div>
+			<div class="zone-main clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont">
+					<div class="head">
+						<div class="assess__360-top bg--6EA8CD">	<!-- 背景状态>	评估assess：bg--6ECDB3 | 调查survey：bg--706ECD | 评测evaluate：bg--6EA8CD -->
+							<!-- //标题 -->
+							<input class="ipt-text" type="text" name="survey_title" placeholder="评测标题" />
+						</div>
+					</div>
+					<div class="cont isScroll">
+						<div class="assess__360-main">
+							<div class="assessor-table">
+								<!-- //被评估人 -->
+								<table class="be-assessor assess__360-tab" border="0" cellspacing="0" cellpadding="0">
+									<thead>
+											<th>评估人员姓名</th>
+											<th>电子邮箱</td>
+											<th>手机号码</td>
+											<th>微信号</td>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+											<td>
+												<div class="ipt-box"><input class="ipt-txt" type="text" name="be-assessorName" /></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="assessor-ftLink">
+								<a class="add-surveyMember transit" href="javascript:;">添加评估人员+</a>
+							</div>
+						</div>
+					</div>
+					<div class="foot">
+						<div class="assess__360-bottom">
+							<!-- //提醒周期 -->
+							<div class="lt_reminder_cycle">
+								<label>提醒周期：</label>
+								<select class="select-control" name="sel_reminder">
+									<option value="0">每天</option>
+									<option value="1">每周</option>
+									<option value="2">每月</option>
+								</select>
+							</div>
+							<a class="btn__submit btn__submit-evaluate transit bg__6EA8CD--hover" href="#"><i></i>提交评测</a>
+							<!-- 图标状态>	评估assess：btn__submit-assess | 调查survey：btn__submit-survey | 评测evaluate：btn__submit-evaluate -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- //底部区域-->
+	<div class="sec_footer clearfix">
+		<div class="inner">
+			<a><img src="img/foot-logo.png" width="360" /></a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>

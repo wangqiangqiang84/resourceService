@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>查看投诉 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.simplemodal.1.4.4.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<div class="hd-menu clearfix">
+			<ul class="ctList">
+				<li><a href="发布(调查-评估).html">发布调查/评估</a></li>
+				<li><a class="on" href="投诉管理.html">投诉管理</a></li>
+			</ul>
+			<ul class="rtList">
+				<li class="uinfo">张小贤(Mr.Z)</li>
+				<li class="lk"><a href="账户管理.html">账户管理</a></li>
+				<li class="lk"><a href="投诉管理.html">投诉管理</a></li>
+				<li class="lk"><a href="登录.html">退出</a></li>
+			</ul>
+		</div>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-head hdNavFixed">
+				<div class="links">
+					<a class="back" href="#"><i></i>返回</a>
+				</div>
+			</div>
+			<div class="zone-main clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont" style="margin: 10px auto; width: 735px;">
+					<div class="cont">
+						<div class="survey__homepage">
+							<div class="homepage__complaint homepage__complaint-form" id="J_check_ckbox">
+								<div class="compllaint__view-tit clearfix">
+									<span class="fl">投诉时间：2016-11-15 14:00</span>
+									<span class="fr">
+										<a href="#" class="btn-reply J_reply">回复投诉</a>
+										<a href="#" class="btn-deal J_dealWith">确认已处理</a>
+									</span>
+								</div>
+								
+								<div class="pt--10 clearfix"></div>
+								<p class="cpt-tit bg--ccc" style="padding: 5px 0; text-align: center;">投诉报告内容-劳工与人权</p>
+								<div class="row">
+									<p class="title">
+										<i class="c--fc3030">*</i>请提供与举报行为相关的人员姓名：<br />
+										<em class="c--999" style="margin-left: 5px;">例如：张三，采购总监</em>
+									</p>
+									<div class="box">
+										<div class="tab">
+											<div class="hd"><em>姓名</em> <em>职位</em></div>
+											<div class="ct clearfix">
+												<div class="col">
+													<input class="fl" type="text" name="username" style="width: 250px;" value="李建刚" />
+													<input class="fr" type="text" name="professional" style="width: 250px;" value="后勤管理" />
+													<input class="fl" type="text" name="username" style="width: 250px;" value="李建刚" />
+													<input class="fr" type="text" name="professional" style="width: 250px;" value="后勤管理" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">
+										您认为或知道他们的直接主管或管理层是否参与了该行为?</p>
+									<div class="box">
+										<label class="chkbox on"><i></i> 是</label> <label class="chkbox"><i></i> 不是</label> <label class="chkbox"><i></i> 不知道/不愿意披露</label>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">如果您认为有直接主管或更高管理层参与了该违规行为，请提供相关人员姓名和职位?</p>
+									<div class="box">
+										<textarea name="content" placeholder="例如：张三，采购总监"></textarea>
+										<p class="c--999">（您所提到的以上所有人员将没有权限浏览该报告并参与调查流程）</p>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">
+										公司管理层有意识到所举报的问题吗?</p>
+									<div class="box">
+										<label class="chkbox on"><i></i> 是</label> <label class="chkbox"><i></i> 不是</label> <label class="chkbox"><i></i> 不知道/不愿意披露</label>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">请描述该事件或违规行为的经过?</p>
+									<div class="box">
+										<textarea name="content"></textarea>
+										<p class="c--999">（此处您只需要简要说明该事件的经过，在随后的调查里我们将要求您提供详细的信息。）</p>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title"><i class="c--fc3030">*</i>请提供事件或违规行为发生的地点?</p>
+									<div class="box">
+										<textarea name="content"></textarea>
+										<p class="c--999">（也许您所举报的事实并不是发生在某一特定地点，但如果您发现在某些文件或流程中可以发现该事实的有力证据，请一定要告诉我们。）</p>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title"><i class="c--fc3030">*</i>请提供事件或违规行为发生的具体事件或大概时间:</p>
+									<div class="box">
+										<textarea name="content"></textarea>
+										<p class="c--999">（例如:2015年三月二号 两个星期前 大概两个月前）</p>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title"><i class="c--fc3030">*</i>您认为该事件或违规行为已经持续了多长时间?</p>
+									<div class="box">
+										<input type="text" name="place" value="2个月" />
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">
+										<i class="c--fc3030">*</i>您认为该事件或违规行为给公司带来了多大损失??</p>
+									<div class="box">
+										<label class="chkbox db on"><i></i> 无财务损失但有声誉损失或法律风险</label> <label class="chkbox"><i></i> 1-5万</label> <label class="chkbox"><i></i> 5-10万</label> <label class="chkbox"><i></i> 10-15万</label> <label class="chkbox"><i></i> 50万以上</label>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title"><i class="c--fc3030">*</i>您是怎么发现该事件或违规行为的?</p>
+									<div class="box">
+										<textarea name="content"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">是否有人试图掩盖该事件或违规行为，他们采取了什么方式来进行掩盖?</p>
+									<div class="box">
+										<textarea name="content" placeholder="请说明他们的名字和职位"></textarea>
+										<p class="c--999">（例如:张三，生产总监，无视事件或违规行为；李四，人力资源总监，修改或伪造文件；王麻子，审计，说他们将会去调查但没有采取任何行动？）</p>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">请提供目击或经历过或者能够提供该事件或违规行为更多信息的证人:</p>
+									<div class="box">
+										<textarea name="content"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<p class="title">为了更好的调查该事件，如果您有更多文件或证据支持您的举报请上传相关资料: <a class="ml--10 c--6ECDB3" href="#" style="text-decoration: underline;">点击上传资料</a></p>
+								</div>
+								<div class="row">
+									<p class="title"><i class="c--fc3030">*</i>请提供举报事件或违规行为的详细信息，包括可能对公司或第三方调查有帮助的同事的联系方式或其它任何对公司或第三方调查有价值的信息。</p>
+									<div class="box">
+										<textarea name="content" placeholder="那天，我看见李建刚和卖家沟通，要了一些回扣。"></textarea>
+										<p class="c--999">请尽可能提供更多信息，除非您愿意实名举报否则请不要提供任何可以准确识别您个人信息的内容（例如：如果该信息只有您一个人可以接触到，那么通过该信息可以确定举报人就是您）</p>
+									</div>
+								</div>
+								<div class="pt--20 cls"></div>
+							</div>
+							<script type="text/javascript">
+								$(function(){
+									/* checkbox选择 */
+									$("#J_check_ckbox .chkbox").on("click", function(){
+										$(this).addClass("on");
+										$(this).siblings().removeClass("on");
+									});
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- ……弹窗内容模板.Start -->
+	<!-- //处理投诉 -->
+	<div class="js-dlg-dealComplaint dlg-complaint">
+		<div class="inner">
+			<div class="tit">
+				<span class="text">处理投诉</span>
+			</div>
+			<div class="ct">
+				<span class="msg">您确认已处理此投诉后将不能回复投诉！</span>
+			</div>
+			<div class="btns">
+				<button class="cancel-btn transit bg__ccc--hover">取消</button>
+				<button class="submit-btn transit bg__6EA8CD--hover">确定</button>
+			</div>
+		</div>
+	</div>
+	<!-- //回复投诉 -->
+	<div class="js-dlg-replyComplaint dlg-complaint dlg-replyComplaint">
+		<div class="inner">
+			<div class="tit">
+				<span class="text">回复投诉</span>
+			</div>
+			<div class="ct">
+				<textarea class="ipt-area" name="content" placeholder="请输入回复内容"></textarea>
+			</div>
+			<div class="btns">
+				<button class="cancel-btn transit bg__ccc--hover">取消</button>
+				<button class="submit-btn transit bg__6EA8CD--hover">确定</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			/* 处理投诉 */
+			$(".J_dealWith").on("click", function(){
+				$(".js-dlg-dealComplaint").modal({
+					focus: false,
+					onShow: function(dlg){
+						var $dlg = $(dlg.data);
+						//确定
+						$dlg.find(".submit-btn").click(function(){
+							alert("处理成功");
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+						//取消
+						$dlg.find(".cancel-btn").click(function(){
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+					}
+				});
+			});
+			
+			/* 回复投诉 */
+			$(".J_reply").on("click", function(){
+				$(".js-dlg-replyComplaint").modal({
+					onShow: function(dlg){
+						var $dlg = $(dlg.data);
+						//确定
+						$dlg.find(".submit-btn").click(function(){
+							alert("回复成功");
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+						//取消
+						$dlg.find(".cancel-btn").click(function(){
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+					}
+				});
+			});
+		});
+	</script>
+	<!-- ……弹窗内容模板.End -->
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>

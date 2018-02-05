@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>企业道德投诉举报 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header align-c">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<span class="hd-tit">公司主页</span>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-head hdNavFixed">
+				<div class="links">
+					<a class="back" href="#"><i></i>返回</a>
+				</div>
+			</div>
+			<div class="zone-main homepage__survey-bg clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont">
+					<div class="cont">
+						<div class="survey__homepage">
+							<div class="homepage__main">
+								<h2 class="tit">名锐讯动 <i>MINGRUIXUNDONG</i></h2>
+								<div class="intro">
+									<div class="inner">
+										<p>公司简介：</p>
+										<p class="text">主营业务网站app建设、微信自媒体、视觉设计、项目策划。团队成员包括专业网站程序员、安卓程序员、ios程序员、资深设计师及文案策划。合作单位包括上市公司、国企、500强企业、政府部分及私企等。主营业务网站app建设、微信自媒体、视觉设计、项目策划。团队成员包括专业网站程序员、安卓程序员、ios程序员、资深设计师及文案策划。合作单位包括上市公司、国企、500强企业、政府部分及私企等。</p>
+									</div>
+								</div>
+								<div class="form clearfix">
+									<h4 class="hd"><i>道德投诉案件进展</i></h4>
+									<form action="#" method="post">
+										<div class="item">
+											<input class="ipt-text" type="text" name="reportKey" placeholder="报告密钥" />
+										</div>
+										<div class="item">
+											<input class="ipt-text" type="password" name="password" placeholder="密码" />
+										</div>
+										<div class="item">
+											<input class="btn-submit" type="button" value="确定" />
+										</div>
+									</form>
+									<div class="ft">
+										<a class="fl" href="企业道德投诉-举报(主页02).html">&lt;返回</a>
+									</div>
+								</div>
+								<div class="ft-logo">
+									<div class="inner">
+										<a><img src="img/foot-logo.png" width="360" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>

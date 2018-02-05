@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>发布 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<div class="hd-menu clearfix">
+			<ul class="ctList">
+				<li><a class="on" href="发布(调查-评估).html">发布调查/评估</a></li>
+				<li><a href="管理系统评估(结果).html">调查/评估管理</a></li>
+			</ul>
+			<ul class="rtList">
+				<li class="uinfo">张小贤(Mr.Z)</li>
+				<li class="lk"><a href="账户管理.html">账户管理</a></li>
+				<li class="lk"><a href="投诉管理.html">投诉管理</a></li>
+				<li class="lk"><a href="登录.html">退出</a></li>
+			</ul>
+		</div>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-head hdNavFixed">
+				<div class="links">
+					<a class="back" href="#"><i></i>返回</a>
+					<span class="tips">管理系统评估</span>
+				</div>
+			</div>
+			<div class="zone-main clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont">
+					<div class="assess-panel">
+						<div class="tips">
+							<h2 class="mt--20">人力资源管理系统评估介绍</h2>
+							<p>人力资源管理系统， 通过提高内部员工的满意度、忠诚度，从而提高员工贡献度，即绩效。用集中的数据将几乎所有与人力资源相关的信息（包括：组织规划、招聘管理、人事在职离职档案、员工履历、劳动合同、奖惩管理、培训管理、绩效管理、考勤管理、计时工资、员工自助、领导审批等）统一管理起来。.</p>
+							
+							<h2 class="mt--30">目的</h2>
+							<p>审核并评估公司人力资源系统的有效性，同时确定公司的管理活动和政策是否符合相关法律法规的要求。创造理想的企业环境，鼓励员工创造，培养积极向上的作风；人力资源政策应为合作、创新和全面质量管理的完善提供合适的环境。</p>
+							<h2 class="mt--30">评分标准</h2>
+							<div class="train-table" style="margin-top: 5px;">
+								<table class="train__tab-result mb--20" border="0" cellspacing="0" cellpadding="0" style="margin: 0; width: 80%;">
+									<thead>
+											<th width="80%">描述</th>
+											<th>分数</th>
+									</thead>
+									<tbody class="align-c">
+										<tr>
+											<td class="align-l pl--20">公司不知道或不清楚该要求或没有对该项目进行管控。</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="align-l pl--20">公司对该项目进行了管控但没有文件资料证明或进行了部分管控。</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td class="align-l pl--20">公司对该项目有规范的管控且能提供问卷资料证明。</td>
+											<td>2</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="btns">
+							<a class="next transit bg__6ECDB3--hover" href="管理系统评估(发布问卷02).html">开始评估</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- //底部区域-->
+	<div class="sec_footer clearfix">
+		<div class="inner">
+			<a><img src="img/foot-logo.png" width="360" /></a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>

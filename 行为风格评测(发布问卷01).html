@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>发布 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<div class="hd-menu clearfix">
+			<ul class="ctList">
+				<li><a class="on" href="发布(调查-评估).html">发布调查/评估</a></li>
+				<li><a href="行为风格评测(已完成).html">调查/评测管理</a></li>
+			</ul>
+			<ul class="rtList">
+				<li class="uinfo">张小贤(Mr.Z)</li>
+				<li class="lk"><a href="账户管理.html">账户管理</a></li>
+				<li class="lk"><a href="投诉管理.html">投诉管理</a></li>
+				<li class="lk"><a href="登录.html">退出</a></li>
+			</ul>
+		</div>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-head hdNavFixed">
+				<div class="links">
+					<a class="back" href="#"><i></i>返回</a>
+					<span class="tips">行为风格评测</span>
+				</div>
+			</div>
+			<div class="zone-main clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont">
+					<div class="assess-panel">
+						<div class="tips">
+							<h2>行为风格评测</h2>
+							<p>本调查为您提供一个表达对公司看法的机会,包括公司做得好的地方以及需要改善的地方。第三方独立调查公司 SINOHRS将负责此次调查。恳请您坦率、诚实作答并请现场完成并提交调查问卷后离开。</p>
+							<p>您的个人意见将会被严格保密：本调查问卷将得到严格保密。我们不会试图识别员工的身份或回答情况。本调查数据流程由独立意见调查研究公司 SINOHRS根据严格保密政策管理。SINOHRS将创建调查结果报告，供分发使用，报告中仅包含 10 名或以上调查对象组别的调查结果。SINOHRS将不会提供任何个别员工资料及数据给您的前雇主。</p>
+						</div>
+						<div class="list">
+							<ul>
+								<li><a class="name on" href="#">系统问卷</a> <i><a class="preview" href="行为风格评测(预览问卷).html" target="_blank">预览</a></i></li>
+								<li><a class="name" href="#">自定义问卷1</a> <i></i></li>
+								<li><a class="name" href="#">自定义问卷2</a> <i></i></li>
+								<li><a class="name" href="#">自定义问卷3</a> <i></i></li>
+							</ul>
+						</div>
+						<div class="btns">
+							<a class="btn-add" href="#"><i></i>我要添加问卷/评测项目</a>
+							<a class="next transit bg__6EA8CD--hover" href="行为风格评测(发布问卷02).html">下一步</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- //底部区域-->
+	<div class="sec_footer clearfix">
+		<div class="inner">
+			<a><img src="img/foot-logo.png" width="360" /></a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>

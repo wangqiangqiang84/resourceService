@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>账户管理 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.simplemodal.1.4.4.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<div class="hd-menu clearfix">
+			<ul class="ctList">
+				<li><a href="发布(调查-评估).html">发布调查/评估</a></li>
+				<li><a class="on" href="账户管理.html">账户管理</a></li>
+			</ul>
+			<ul class="rtList">
+				<li class="uinfo">张小贤(Mr.Z)</li>
+				<li class="lk"><a href="账户管理.html">账户管理</a></li>
+				<li class="lk"><a href="投诉管理.html">投诉管理</a></li>
+				<li class="lk"><a href="登录.html">退出</a></li>
+			</ul>
+		</div>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-main clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont" style="margin: 10px auto; width: 735px;">
+					<div class="cont">
+						<div class="accountManage__homepage">
+							<!-- //账户信息-->
+							<div class="account__head clearfix">
+								<span class="fl">账户信息</span>
+							</div>
+							<div class="account__cont">
+								<ul>
+									<li><label>账号：</label> <span class="text">98748712</span></li>
+									<li><label>账户邮箱：</label> <span class="text">98748712@qq.com</span></li>
+									<li><label>用户名：</label> <span class="text">张小贤 <a class="edit J_editUName" href="#">修改</a></span></li>
+									<li><label>账户密码：</label>******* <span class="text"><a class="edit J_editPwd" href="#">修改</a></span></li>
+								</ul>
+							</div>
+							
+							<!-- //企业信息-->
+							<div class="account__head clearfix">
+								<span class="fl">企业信息</span> <a class="btn-edit J_editEnterpriseInfo" href="#">修改</a>
+							</div>
+							<div class="account__cont" id="J_editBox">
+								<ul class="status1">
+									<li><label>负责人：</label> <span class="text">Mr.oj</span></li>
+									<li><label>企业名称：</label> <span class="text">名锐讯动信息科技有限公司</span></li>
+									<li><label>企业地点：</label> <span class="text">广东省广州市</span></li>
+									<li><label>行业类型：</label> <span class="text">设计研发</span></li>
+									<li><label>联系方式：</label> <span class="text">15820103956</span></li>
+								</ul>
+								<ul class="status2" style="display: none;">
+									<li><label>负责人：</label> <input class="input_text" type="text" value="Mr.oj" /></li>
+									<li><label>企业名称：</label> <input class="input_text" type="text" value="名锐讯动信息科技有限公司" /></li>
+									<li><label>企业地点：</label> <input class="input_text" type="text" value="广东省广州市" /></li>
+									<li><label>行业类型：</label> <em class="input_text ellipsis un_select J_selIndustry" style="width: 190px;">设计研发</em></li>
+									<li><label>联系方式：</label> <input class="input_text" type="text" value="15820103956" /></li>
+								</ul>
+							</div>
+							<script type="text/javascript">
+								$(function(){
+									//修改企业信息
+									$(".J_editEnterpriseInfo").on("click", function(){
+										if($(this).text() == "修改"){
+											$(this).text("保存");
+											$("#J_editBox .status1").hide();
+											$("#J_editBox .status2").show();
+										}else{
+											$(this).text("修改");
+											$("#J_editBox .status1").show();
+											$("#J_editBox .status2").hide();
+										}
+									});
+								});
+							</script>
+							
+							<!-- //审核状态-->
+							<div class="account__cont">
+								<!-- //已上传|审核失败-->
+								<div class="credentials clearfix">
+									<div class="col">
+										<label>营业执照<br /> <i class="c--6EA8CD">(已上传)</i></label>
+										<a class="btn-upload">
+											<div class="list">
+												<img src="img/placeholder/credentials-img.jpg" />
+											</div>
+											<input type="file" />
+										</a>
+									</div>
+									<div class="col ml--20">
+										<label>组织机构代码证<br /> <i class="c--fc3030">(审核失败)</i></label>
+										<a class="btn-upload">
+											<div class="list">
+												<img src="img/placeholder/credentials-img.jpg" />
+											</div>
+											<span class="txt mask"><i>重新上传</i></span>
+											<input type="file" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- //底部区域-->
+	<div class="sec_footer clearfix">
+		<div class="inner">
+			<a><img src="img/foot-logo.png" width="360" /></a>
+		</div>
+	</div>
+	
+	<!-- ……弹窗内容模板.Start -->
+	<!-- //修改用户名 -->
+	<div class="js-dlg-editUName dlg-complaint dlg-editUinfo" style="height: 220px;">
+		<div class="inner">
+			<div class="tit">
+				<span class="text">修改用户名</span>
+			</div>
+			<div class="ct">
+				<div class="form">
+					<ul>
+						<li>新用户名：<input type="text"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="btns">
+				<button class="cancel-btn transit bg__ccc--hover">取消</button>
+				<button class="submit-btn transit bg__6EA8CD--hover">保存</button>
+			</div>
+		</div>
+	</div>
+	<!-- //修改密码 -->
+	<div class="js-dlg-editPwd dlg-complaint dlg-editUinfo" style="height: 300px;">
+		<div class="inner">
+			<div class="tit">
+				<span class="text">修改密码</span>
+			</div>
+			<div class="ct">
+				<div class="form">
+					<ul>
+						<li>输入原密码：<input type="password"></li>
+						<li>输入新密码：<input type="password"></li>
+						<li>确认新密码：<input type="password"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="btns">
+				<button class="cancel-btn transit bg__ccc--hover">取消</button>
+				<button class="submit-btn transit bg__6EA8CD--hover">保存</button>
+			</div>
+		</div>
+	</div>
+	<!-- //选择行业-->
+	<div class="js-dlg-selIndustry dlg-complaint dlg-selIndustry" style="height: 500px; width: 600px;">
+		<div class="inner">
+			<i class="close-btn"></i>
+			
+			<!-- //内容区-->
+			<div class="s_filter_box_industry">
+				<div class="box_inner">
+					<div class="areaList">
+						<a class="cur" data-val="1001">食品加工业</a>
+						<a data-val="1005" class="">纺织业</a>
+						<a data-val="1012" class="">服装、鞋帽、箱包、皮革制造业</a>
+						<a data-val="1014" class="">木材、家具加工制造业</a>
+						<a data-val="1022" class="">造纸、印刷包装制造业</a>
+						<a data-val="1042" class="">石油化工生物医药业</a>
+						<a data-val="1048" class="">冶金及矿物制品</a>
+						<a data-val="1051" class="">机械加工业</a>
+						<a data-val="1057" class="">计算机、电子、电器、通信设备制造</a>
+						<a data-val="1067" class="">机械设备制造业</a>
+						<a data-val="1078" class="">汽车交通工具制造业</a>
+						<a data-val="1082" class="">工艺品、珠宝、玩具及其他制造业</a>
+						<a data-val="1094" class="">设计、研发</a>
+						<a data-val="1094" class="">交通、物流、运输业</a>
+						<a data-val="1094" class="">贸易进出口</a>
+					</div>
+					<div class="areaChildList">
+						<ul class="jx_areaData" data-parentVal="1001">
+							<li data-childVal="10010">食品的制造</li>
+							<li data-childVal="10011">肉类的加工和保存</li>
+							<li data-childVal="10012">鱼类、甲壳类和软体类动物的加工和保藏</li>
+							<li data-childVal="10013">水果和蔬菜的加工和保藏</li>
+							<li data-childVal="10014">动植物油和油脂的制造</li>
+							<li data-childVal="10015">乳制品的制造</li>
+							<li data-childVal="10016">谷物磨制品、淀粉和淀粉制品的制造</li>
+							<li data-childVal="10017">谷物磨制品的制造</li>
+							<li data-childVal="10018">淀粉及淀粉制品的制造</li>
+							<li data-childVal="10019">其他食品的制造</li>
+							<li data-childVal="10020">烘烤食品的制造</li>
+							<li data-childVal="10021">糖的制造</li>
+							<li data-childVal="10022">可可、巧克力和糖果的制造</li>
+							<li data-childVal="10023">通心粉、面条、方便面和类似的淀粉制品的制造</li>
+							<li data-childVal="10024">熟食和熟菜的制造</li>
+							<li data-childVal="10025">未另分类的其他食品的制造</li>
+							<li data-childVal="10026">牲畜精饲料的制造</li>
+							<li data-childVal="10027">饮料的制造</li>
+							<li data-childVal="10030">饮料的制造</li>
+							<li data-childVal="10033">烈酒的蒸馏、精馏和混合</li>
+							<li data-childVal="10035">葡萄酒的制造</li>
+							<li data-childVal="10036">麦芽酒和麦芽的制造</li>
+						</ul>
+						<ul class="jx_areaData" data-parentVal="1005" style="display: none;">
+							<li data-childVal="10011">烘烤食品的制造</li>
+							<li data-childVal="10012">糖的制造</li>
+							<li data-childVal="10013">可可、巧克力和糖果的制造</li>
+							<li data-childVal="10014">通心粉、面条、方便面和类似的淀粉制品的制造</li>
+							<li data-childVal="10015">熟食和熟菜的制造</li>
+							<li data-childVal="10016">未另分类的其他食品的制造</li>
+							<li data-childVal="10017">牲畜精饲料的制造</li>
+							<li data-childVal="10018">饮料的制造</li>
+						</ul>
+						<ul class="jx_areaData" data-parentVal="1012" style="display: none;">
+							<li data-childVal="10020">动植物油和油脂的制造</li>
+							<li data-childVal="10030">乳制品的制造</li>
+							<li data-childVal="10840">谷物磨制品、淀粉和淀粉制品的制造</li>
+							<li data-childVal="10050">谷物磨制品的制造</li>
+							<li data-childVal="10060">淀粉及淀粉制品的制造</li>
+							<li data-childVal="10070">其他食品的制造</li>
+							<li data-childVal="10080">烘烤食品的制造</li>
+							<li data-childVal="10220">糖的制造</li>
+							<li data-childVal="10610">可可、巧克力和糖果的制造</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			/* 修改用户名 */
+			$(".J_editUName").on("click", function(){
+				$(".js-dlg-editUName").modal({
+					onShow: function(dlg){
+						var $dlg = $(dlg.data);
+						//确定
+						$dlg.find(".submit-btn").click(function(){
+							alert("修改成功");
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+						//取消
+						$dlg.find(".cancel-btn").click(function(){
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+					}
+				});
+			});
+			
+			/* 修改密码 */
+			$(".J_editPwd").on("click", function(){
+				$(".js-dlg-editPwd").modal({
+					onShow: function(dlg){
+						var $dlg = $(dlg.data);
+						//确定
+						$dlg.find(".submit-btn").click(function(){
+							alert("修改成功");
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+						//取消
+						$dlg.find(".cancel-btn").click(function(){
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+					}
+				});
+			});
+			
+			/* 选择行业弹窗 */
+			$(".J_selIndustry").on("click", function(){
+				$(".js-dlg-selIndustry").modal({
+					onShow: function(dlg){
+						var $dlg = $(dlg.data);
+						
+						/*切换*/
+						$dlg.find(".s_filter_box_industry .areaList a").click(function(){
+							$(this).addClass("cur").siblings().removeClass("cur");
+							
+							$(".jx_areaData").hide();
+							$(".jx_areaData[data-parentVal='" + $(this).attr("data-val") + "']").slideDown(300);
+						});
+						
+						/*选择*/
+						$dlg.find(".jx_areaData li").click(function(){
+							$(".J_selIndustry").html($(this).html());
+							$.modal.close();
+						});
+						
+						
+						$dlg.find(".submit-btn").click(function(){
+							alert("修改成功");
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+						
+						//关闭
+						$dlg.find(".close-btn").click(function(){
+							//关闭弹窗
+							$.modal.close();
+							return false;
+						});
+					}
+				});
+			});
+		});
+	</script>
+	<!-- ……弹窗内容模板.End -->
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>

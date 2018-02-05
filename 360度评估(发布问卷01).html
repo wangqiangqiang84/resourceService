@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+	<title>发布 - 优秀人力资源服务商</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<!-- <>顶部 -->
+	<div class="sec_header">
+		<div class="logo">
+			<a href="index.html"><img src="img/hd-logo.png" /></a>
+		</div>
+		<div class="hd-menu clearfix">
+			<ul class="ctList">
+				<li><a class="on" href="发布(调查-评估).html">发布调查/评估</a></li>
+				<li><a href="360度评估(已完成).html">调查/评估管理</a></li>
+			</ul>
+			<ul class="rtList">
+				<li class="uinfo">张小贤(Mr.Z)</li>
+				<li class="lk"><a href="账户管理.html">账户管理</a></li>
+				<li class="lk"><a href="投诉管理.html">投诉管理</a></li>
+				<li class="lk"><a href="登录.html">退出</a></li>
+			</ul>
+		</div>
+	</div>	<!-- END.sec_header -->
+	
+	<!-- <>主体区域 -->
+	<div class="sec_container clearfix">
+		<div class="sys-mainZone sys-mainZone-unSide" id="J_mainZone">
+			<div class="zone-head hdNavFixed">
+				<div class="links">
+					<a class="back" href="#"><i></i>返回</a>
+					<span class="tips">360度评估</span>
+				</div>
+			</div>
+			<div class="zone-main clearfix" id="J_mainCont">
+				<!-- //内容容器(嵌入)-->
+				<div class="wrapper-cont isEmbed" id="J_wrapCont">
+					<div class="assess-panel">
+						<div class="tips">
+							<h2>360度调查简介</h2>
+							<p>360度评估反馈（360°Feedback），又称“360度考核法”或“全方位考核法”，是指由员工自己、上司、直接部属、同仁同事甚至顾客等从全方位、各个角度来评估人员的方法。评估内容可能包括沟通技巧、人际关系、领导能力、行政能力等等……通过这种理想的评估，被评估者不仅可以从自己、上司、部属、同事甚至顾客处获得多种角度的反馈，也可从这些不同的反馈清楚地知道自己的不足、长处与发展需求。</p>
+							<p>360度评估反馈自20世纪80年代以来，迅速为国际上许多企业所采用。在《财富》排出的全球1000家大公司中，超过90%的公司应用了360°考核法。很多大公司都把360°评价模式用于人力资源管理和开发。事实上，360度工具的流行并不限于大公司，据一项对美国企业较大规模的调查显示，65%以上的公司在2000年采用了这种多面评估的评定体系，比1995年的调查结果40%上升了许多。</p>
+							
+							<h2>360度调查优势</h2>
+							<p><b>准确性：</b>根据心理测量理论，对个体从多个角度获得观察并将得出更有效和更可靠。企业常规的考评方法是员工的领导、管理者评价下属的能力，360更准确的原因是1. 人员选择正确，多角度的结果比单一的视角准确。2.多角度提供了对评价人员胜任力素质更为全面的了解。3. 匿名性的评估确保评估结果更为的可靠和可信。</p>
+							<p><b>接受性：</b>研究发现多角度的评估比更单一上级评估容易让评价者接受结果，因此也更容易采取行动改善。这在个人发展上尤为关键，因为无论你的结果有多准，没有力图改变的动机，想到到达的效果也是很有限的。</p>
+							<p><b>参与性：</b>360评估涉及到整个组织，实施一次360度评估反馈几乎能让所有的员工都参与进来，提供了上级和下属间沟通的公开平台。</p>
+						</div>
+						<div class="list">
+							<ul>
+								<li><a class="name on" href="#">系统问卷</a> <i><a class="preview" href="360度评估(预览问卷).html" target="_blank">预览</a></i></li>
+								<li><a class="name" href="#">自定义问卷1</a> <i></i></li>
+								<li><a class="name" href="#">自定义问卷2</a> <i></i></li>
+								<li><a class="name" href="#">自定义问卷3</a> <i></i></li>
+							</ul>
+						</div>
+						<div class="btns">
+							<a class="btn-add" href="#"><i></i>我要添加问卷/评估项目</a>
+							<a class="next transit bg__6ECDB3--hover" href="360度评估(发布问卷02).html">下一步</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- //底部区域-->
+	<div class="sec_footer clearfix">
+		<div class="inner">
+			<a><img src="img/foot-logo.png" width="360" /></a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function(){
+			/* 侧边栏|容器高度 */
+			function containerHeight(){
+				var sideH = $(window).height() - $(".sec_header").outerHeight(true);
+				var mainH = $(window).height() - $(".sec_header").outerHeight(true) - ($(".sec_footer").length ? $(".sec_footer").outerHeight(true) : 0);
+				if($("#J_mainZone").children().hasClass("hdNavFixed")){
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH);
+					$("#J_mainCont").height(mainH - $(".hdNavFixed").outerHeight(true)).css("overflow-y", "auto");
+				}else{
+					if($("#J_sideMenu").length){
+						$("#J_sideMenu").height(sideH);
+					}
+					$("#J_mainZone").height(mainH).css("overflow-y", "auto");
+				}
+				//内嵌
+				if($("#J_wrapCont").hasClass("isEmbed")){
+					var mT = parseInt($("#J_wrapCont").css("margin-top")), mB = parseInt($("#J_wrapCont").css("margin-bottom")), mTB = mT + mB;
+					$("#J_wrapCont").height(mainH - $(".hdNavFixed").outerHeight(true) - mTB).css("overflow-y", "auto");
+					if($("#J_wrapCont").find(".isScroll")){
+						var hdH = $("#J_wrapCont .head").length ? $("#J_wrapCont .head").outerHeight(true) : 0,
+							ftH = $("#J_wrapCont .foot").length ? $("#J_wrapCont .foot").outerHeight(true) : 0;
+						$("#J_wrapCont .isScroll").height($("#J_wrapCont").outerHeight(true) - hdH - ftH - mTB).css("overflow-y", "auto");
+					}
+				}
+			}
+			containerHeight();
+			$(window).resize(function(){
+				containerHeight();
+			});
+		});
+	</script>
+	
+</body>
+</html>
